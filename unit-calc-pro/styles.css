@@ -1,0 +1,150 @@
+:root {
+    --primary: #6366f1;
+    --accent: #a855f7;
+    --bg: #0f172a;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --text: #f8fafc;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Background Glow Effect */
+.background-glow {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 50% 50%, #1e1b4b 0%, #0f172a 100%);
+    z-index: -1;
+}
+
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px); /* The Glass Effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 24px;
+    width: 90%;
+    max-width: 420px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    
+    /* The Fix */
+    -webkit-background-clip: text; /* For Chrome/Safari */
+    background-clip: text;         /* The Standard version */
+    
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Fallback for older browsers */
+}
+
+.pro-tag {
+    font-size: 0.6rem;
+    padding: 2px 6px;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-left: 5px;
+    color: var(--accent);
+    -webkit-text-fill-color: var(--accent);
+}
+
+.section-label {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #94a3b8;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input, select {
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
+}
+
+.input-row {
+    display: flex; gap: 12px; margin-bottom: 20px;
+}
+
+button#calcBtn {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border: none;
+    color: white;
+    padding: 16px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button#calcBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.4);
+}
+
+/* Table Aesthetics */
+.grade-table {
+    width: 100%;
+    margin-top: 20px;
+    border-spacing: 0 8px;
+    border-collapse: separate;
+}
+
+.grade-table td {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 12px;
+}
+
+.grade-table tr td:first-child { border-radius: 8px 0 0 8px; }
+.grade-table tr td:last-child { border-radius: 0 8px 8px 0; text-align: right; }
+
+.impossible { color: #f87171; }
+.secured { color: #4ade80; font-weight: bold; }
+
+.personal-credit {
+    position: fixed;bottom: 0.0;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.75rem;
+    color: ivory;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    background: #10b981;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #10b981;
+}

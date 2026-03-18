@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Predictor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-glow"></div>
+<div class="card">
+    <header>
+        <div class="logo">⚡ SmartUnit <span class="pro-tag">PRO</span></div>
+        <p>MMUST Engineering Dashboard</p>
+        
+        <div class="weight-settings">
+            <label>Mode:</label>
+            <select id="internalWeight">
+                <option value="30">30/70 (Standard)</option>
+                <option value="40">40/60 (Technical)</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="input-section">
+        <label class="section-label">Continuous Assessment (CATs)</label>
+        <div class="input-row">
+            <input type="number" class="cat-input" placeholder="CAT 1">
+            <input type="number" class="cat-input" placeholder="CAT 2">
+        </div>
+
+        <div class="assignment-header">
+            <label class="section-label">Assignments & Labs</label>
+            <button type="button" onclick="addAssignment()" class="add-btn">+</button>
+        </div>
+        <div id="assignmentContainer">
+            <input type="number" class="assign-input" placeholder="Score 1">
+        </div>
+
+        <div class="input-group">
+            <label class="section-label">Target Goal (%)</label>
+            <input type="number" id="targetGrade" value="70">
+        </div>
+
+        <button onclick="calculateFate()" id="calcBtn">Run Forecast</button>
+    </div>
+
+    <div id="resultArea"></div>
+</div>
+    <script src="script.js"></script>
+<footer class="personal-credit">
+    <span>Designed & Created by <strong>Kingsley</strong></span>
+    <div class="status-dot"></div>
+</footer>
+</body>
+</html>
